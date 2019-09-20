@@ -113,7 +113,7 @@ local function BeautyText( str, font, font_shadow, x, y, color, xalign, yalign )
 	return tw,th
 end
 
-local function WideBar(num, max, w, color, x, y)
+local function HealthBar(num, max, w, color, x, y)
 	local h = 22 * scale
 
 	local o = BeautyText(num .. "%", "abs_hud", "abs_hud_shadow", x, y, color, ALIGN_LEFT, ALIGN_TOP) + 4 * scale
@@ -128,7 +128,7 @@ local function WideBar(num, max, w, color, x, y)
 	return o + w * scale, h
 end
 
-local function ArmBar(num, max, w, color, x, y)
+local function ArmorBar(num, max, w, color, x, y)
 	local h = 22 * scale
 
 	local o = BeautyText(num .. "%", "abs_hud", "abs_hud_shadow", x, y, color, ALIGN_LEFT, ALIGN_TOP) + 4 * scale
@@ -143,7 +143,7 @@ local function ArmBar(num, max, w, color, x, y)
 	return o + w * scale, h
 end
 
-local function HunBar(num, max, w, color, x, y)
+local function HungerBar(num, max, w, color, x, y)
 	local h = 22 * scale
 
 	local o = BeautyText(num .. "%", "abs_hud", "abs_hud_shadow", x, y, color, ALIGN_LEFT, ALIGN_TOP) + 4 * scale
