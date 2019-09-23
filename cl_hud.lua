@@ -17,7 +17,6 @@ local hideHUDElements = {
 	["DarkRP_LocalPlayerHUD"] = true,
 	["DarkRP_Hungermod"] = true,
 
-	-- Drawing the DarkRP agenda
 	["DarkRP_Agenda"] = false,
 	["CHudAmmo"] = true,
 }
