@@ -127,7 +127,7 @@ local function HealthBar(num, max, w, color, x, y)
 	return o + w * scale, h
 end
 
-local function ArmorBar(num, max, w, color, x, y)
+local function ArmourBar(num, max, w, color, x, y)
 	local h = 22 * scale
 
 	local o = BeautyText(num .. "%", "abs_hud", "abs_hud_shadow", x, y, color, ALIGN_LEFT, ALIGN_TOP) + 4 * scale
