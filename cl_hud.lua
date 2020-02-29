@@ -40,40 +40,46 @@ surface.CreateFont("abs_hud_time", {
 	size = 35 * scale,
 	weight = 350 * scale,
 	antialias = true,
-	font = "Roboto"})
+	font = "Roboto"
+})
 
 surface.CreateFont("abs_hud_time_shadow", {
 	size = 35 * scale,
 	weight = 350 * scale,
 	antialias = true,
 	blursize = 3 * scale,
-	font = "Roboto"})
+	font = "Roboto"
+})
 
 surface.CreateFont("abs_hud_ammo", {
 	size = 42 * scale,
 	weight = 350 * scale,
 	antialias = true,
-	font = "Roboto"})
+	font = "Roboto"
+})
 
 surface.CreateFont("abs_hud_ammo_shadow", {
 	size = 42 * scale,
 	weight = 350 * scale,
 	antialias = true,
 	blursize = 3 * scale,
-	font = "Roboto"})
+	font = "Roboto"
+})
 
 surface.CreateFont("abs_hud", {
 	size = 22 * scale,
 	weight = 350 * scale,
 	antialias = true,
-	font = "Tahoma"})
+	font = "Tahoma"
+})
 
 surface.CreateFont("abs_hud_shadow", {
 	size = 22 * scale,
 	weight = 350 * scale,
 	antialias = true,
 	blursize = 3 * scale,
-	font = "Tahoma"})
+	font = "Tahoma"
+})
 
 local ALIGN_LEFT = 0
 local ALIGN_CENTER = 0.5
@@ -94,6 +100,7 @@ local function BeautyText( str, font, font_shadow, x, y, color, xalign, yalign )
 	x = (x or 0) - tw * (xalign or 0)
 	y = (y or 0) - th * (yalign or 0)
 	surface.SetTextPos( x, y )
+
 	if font_shadow then
 		surface.SetTextPos( x, y+3 )
 		surface.SetTextColor( col_shadow )
@@ -101,6 +108,7 @@ local function BeautyText( str, font, font_shadow, x, y, color, xalign, yalign )
 		surface.DrawText( str )
 		surface.SetTextPos( x, y )
 	end
+
 	surface.SetTextPos( x + shadow_x , y + shadow_y )
 	surface.SetTextColor( col_half_shadow )
 	surface.SetFont( font )
@@ -195,14 +203,9 @@ Row (
 			yield(BeautyText("Броня: ", "abs_hud", "abs_hud_shadow", x, y, color_white, ALIGN_LEFT, ALIGN_TOP))
 			
 			yield(ArmBar(LocalPlayer():Armor(), 100, 100, HSVToColor(math.Clamp(LocalPlayer():Armor(), 100, 100) * 1.2, 1, 1), x, y))
-			
-			
-		end
-	
-
-
-
+		end	
 	end,
+	
 	function()
 		local energy = LocalPlayer():getDarkRPVar("Energy") or 0
 		if energy > 0 then
